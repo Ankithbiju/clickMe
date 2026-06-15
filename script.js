@@ -1,4 +1,5 @@
 let btn = document.querySelector("button")
+let predict = document.querySelector(".prediction")
 let moved=false
 btn.addEventListener("mouseover", function () {
     if (!moved) {
@@ -10,3 +11,7 @@ btn.addEventListener("mouseover", function () {
         moved = false
     }
 })
+setTimeout(function () {
+    btn.style.display = "none"
+    predict.innerText = "You didn't click the button"
+},6000)
